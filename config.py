@@ -4,11 +4,13 @@
 AutoHunt.config
 """
 
+"""Targeted websites"""
 class targets:
     SeLoger = 'SeLoger'
     Century21 = 'Century21'
     PAP = 'PAP'
 
+"""Parameter fields, name of the desired field to set"""
 class fields:
     location = 'Localisation'
     room_number = 'Nombre de pieces'
@@ -21,6 +23,7 @@ class fields:
     button3 = 'button3'
     button4 = 'button4'
 
+"""Result fields, name of the desired field to scrape"""
 class results:
     title = 'title'
     photo_url = 'photo_url'
@@ -40,6 +43,7 @@ class results:
     ref = 'ref'
     boosted = 'boosted'
 
+"""Method linked to the field class"""
 class methods:
     pclick = 'pclick' # click launching another page, js
     click = 'click' # standart click, js
@@ -54,6 +58,7 @@ SEARCH_LINKS = {
 
 URL_BLACK_LIST = ['www.demeures-de-charme.com', 'www.immoneuf.com', 'www.pap.fr/vendeur/estimation-gratuite']
 
+"""Element whose existence has to be checked to insure the correct loading of the webpage"""
 KEY_FILLER_CHECKER = {
     targets.SeLoger: '#search-content > div.c-quest-field.location-field > div > div > div.selectize-input.items.not-full.has-options.has-items.oneLine > div.item.active',
     targets.Century21: '#moteurAffineeTop > div.zone-field > ul.token-input-list-facebook > li.token-input-token-facebook > p',
@@ -61,6 +66,8 @@ KEY_FILLER_CHECKER = {
 }
 
 # HTML Path of elements (CSS Selector only)
+
+"""Describe each website landing page to configure according to the search parameters defined in the google spreadsheet"""
 SEARCH_FIELDS = {
 
     targets.SeLoger: {
@@ -124,6 +131,7 @@ FIELD_TO_WAIT_FOR = {
 }
 
 # Xpath or CSS Selector
+"""Describe each website results page to scrape"""
 SCRAPE_FIELDS = {
 
     targets.SeLoger: {
@@ -184,6 +192,7 @@ SCRAPE_FIELDS = {
 
 }
 
+"""Button to click on to go to the next result page"""
 NEXT_BUTTON_FIELDS = {
     targets.SeLoger: '#habillage > div > div.c-slice > div > div.c-wrap-main > div > div > section > div.bottomAnchorWrapper > div.annonce.annonce__footer > div > div.pagination-bloc1.u-marg-200 > div:nth-child(5) > a',
     targets.Century21: '#blocPAGINATION > div.pagination_seo > div.elementL > div > ul > li.btnSUIV_PREC.suivant > a',
@@ -196,6 +205,7 @@ BELLE_DEMEURE = {
     'field_to_wait_for': '#wrapper > div > div > div.detailWrapInfos > div.detailDesc.wrapMain.js_contact_wrapper > p.detailDescSummary'
 }
 
+"""Parameter to fill the Google Spreadsheet results"""
 class IMAGE_PARAMS:
     col_start_index = 0
     col_end_index = 1
@@ -228,15 +238,24 @@ class SMALL_PARAMS:
     row_end_index = 100
     row_pixel_size = 300
 
+# Maximum try number of each action
 MAX_ATTEMPT = 5
+# Maximum results to gather per targets 
 MAX_RESULT_PER_TARGET = 3
+# Maximum time to wait while a webpage is loading
 EC_MAX_TO_WAIT = 10
+# Random time range to wait for between each key typing
 TYPING_TIME_RANGE = (0, 1)
+# Random time range to wait for between each action
 ACTION_TIME_RANGE = (0, 2)
+# Button field 
 FIELD_WHITELIST = [fields.button1, fields.button2, fields.button3, fields.button4]
-GOOGLE_SPREADSHEET_NAME = 'AutoHunt - Beta 1.0.0'
+# Principal Google Spreadsheet where both your input and result are stored 
+GOOGLE_SPREADSHEET_NAME = 'YOUR GOOGLE SPREADSHEET'
+# Basic return result of an unfound item 
 NOT_FOUND_ITEM = ''
 NOT_BOOSTED_ITEM = '.'
+# Define the position of fields inside the input spreadsheet
 KEYWORDS_COL_NUMBERS = 3
 X_INDEX_KEYWORD = 4
 Y_INDEX_KEYWORD_TOP = 0
