@@ -5,13 +5,13 @@ A webscraping solution to collect data from Real Estate agencies.
 ### Inputs Sheet
 
 Select your research criterias.
-You can use keyword on the right to boost, filter or delete results
+You can use keyword on the right to boost, filter or delete results.
 
 ![alt text](https://raw.githubusercontent.com/Vincent-Maladiere/AutoHunt/master/inputs.png)
 
 ### Results Sheet
 
-Watch the results from supported websites! (See config for full list of them)
+Watch the results from supported websites! (See config for full list of them).
 
 ![alt text](https://raw.githubusercontent.com/Vincent-Maladiere/AutoHunt/master/results.png)
 
@@ -70,17 +70,17 @@ python3 AutoHunt.py
 ```
 AutoHunt.py
 ```
-Result class, Scraper class and main function
+Result class, Scraper class and main function.
 
 ```
 spreadsheet.py
 ```
-Shaping and downloading of data through gspread and pandas 
+Shaping and downloading of data through gspread and pandas.
 
 ```
 format.py
 ```
-Fast uploading of scraping results on google spreadsheet
+Fast uploading of scraping results on google spreadsheet.
 
 ## Todo Next
 
