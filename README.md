@@ -19,11 +19,11 @@ Watch the results from supported website! (See config for full list of website)
 
 ### Prerequisites
 
-• Python version 3.3+
-• gspread >=3.0.0
-• pandas >=0.20.3
-• selenium >=3.11.0
-• oauth2client >=4.1.2
+• Python version 3.3+ \n
+• gspread >=3.0.0 \n
+• pandas >=0.20.3 \n
+• selenium >=3.11.0 \n
+• oauth2client >=4.1.2 \n
 
 ### Installing
 
@@ -75,4 +75,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to [Robin900] whose gspread-dataframe under MIT license was used in format.py
+* Hat tip to @Robin900 whose gspread-dataframe under MIT license was used in format.py
