@@ -96,7 +96,7 @@ def open_spreadsheet(name_of_spreadsheet):
     """
     logprint("Opening of Spreadsheet {}...".format(name_of_spreadsheet))
     scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-    credentials = ServiceAccountCredentials.from_json_keyfile_name('Apps Script Execution API Quic-0d5369b6757b.json', scope)
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(Apps_Script_Credentials, scope)
     try:
         gc = authorize(credentials)
         sheet_result = gc.open(name_of_spreadsheet).get_worksheet(1)
