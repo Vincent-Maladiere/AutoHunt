@@ -260,3 +260,6 @@ KEYWORDS_COL_NUMBERS = 3
 X_INDEX_KEYWORD = 4
 Y_INDEX_KEYWORD_TOP = 0
 Y_INDEX_KEYWORD_BOTTOM = 3
+
+# Name of the Google Script API Credential file
+Apps_Script_Credentials = 'YOUR_CREDENTIAL_FILE.json'
