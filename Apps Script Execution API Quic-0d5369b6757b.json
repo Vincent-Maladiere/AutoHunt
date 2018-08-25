@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "project-id-4440103910321186206",
+  "private_key_id": "0d5369b6757b7b71df12f6e0973c5f3a0464e587",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDpIeMrJztV3Ill\nrWQajTcYX/U//yPnwMFLqPQ/FrYDRFFd5dY6UhxCFQpqD5CXNwgaGloYffRHJoTj\nCXZvwz3cBVzLTiaFX+hozU+gOS0NtXfGGhZwE1ZDaox4pPBjeNv8SIuC0C5yujEa\n1/9gUicfWGKNTKPhPosTo/SmzP5kKCZVDvlKbKKDYK7rvsUkVHk6tLtCvyM5KiTQ\nuD0FXjj9N5o6ycJLjF0LEmaJg1g24heZtJGDONlo91fAg2K8gv9hU1MCcM7UHeJ1\n69TDZoIBTN/nxIsCCAUIqcsypxgwlpEXLNazHHBaeKBbBYN57pneHhpOFIDXte32\nFgZ5ma4BAgMBAAECggEAT7fgwD7YEVIqQXR7CIFFV7ZoXIvYMUU+U6rgajpP3uob\nkKopCSROuWIMf5v2615MDPD54eof/7xyMFhqAWmX24aR5otArNbQ2BVspvMmLsvg\nuwLsrUJPexoSEqcD9F+9iZUc74xUdbKpW+6ESuGMszE78elFGJ6UXBDydZ8fVgul\nfFdY8ahGEmikAvFQTTdfAuwSBUMx3MYGyR6a/DxnipRTQxnOigrgLYWsENUit3qk\nnr80x6xMwbkE0tK1YrxIW4efeK0rdZc6dd669zgQ1m8Rs21R3txjKerR5Jm1IQuU\nsckdYdtRXe2a+joskbojxTxk6UODH4VldXrg6jsoSQKBgQD7HlElH6JzHQeDyQjI\nfNU8RqTaZB5AqkjR4sbxKwbPFf2qd6ygM1J0qOT4y+olxR4j7nMLd7vHJNMNETgj\nsuemhE5a1EHqju6bms/o8jq1kRRjWpZYxvLCIJUN0+r7DcAPi7gaKEvaofaci8ii\nkwuXHvyoe9+VTSkRX0Y9mwRRGwKBgQDtqhA5F+1ZhZJrCxJvLhG657wzvj2OdXnD\nh2mVkgPXlIWbglp1X5tTGNcpz5aNTLcKzAsVskghTJkCsiHeN/G4C73bu4emh3Sv\nae8+71E4osJX7BMy+5DLZAafWxV4pv/W0Rh9c2N/4z5PHW4DYQqQhN56gcH+26DL\nvaui4pqLEwKBgEIT5yxKl7eMsvaFhs8isgWLXUOuRpujc0fvUYQSW1dQpRAfL4h0\nGMVjz+R72+AWb2jrDNC+r+WmFfcBSfFy2Svi8q9J3RJ4i+bcJMtaOgKe62t9YcR4\njVZxtmcOFW38X0Z38HjJk7QzHC5zRdcptEoOuFMpTVr/E8hjdpstWERzAoGAM3g+\nFS9CXr3XrMj0EBHpExI2pvoPOLfmS9samaLKpDhtCvWbA4pWCBP8HPjxAN7ZUURJ\nLkSy7Es7Y+MSBJ8XASXB00F0qjLxqT+G6ZlIfLx63DGrIsJqZDHgYUiHiN6Zz3rv\nE9QWe07KYrXb6m1srUmpKNzLF5eW5ijIb/klQPMCgYEA9siqECcmhUmvKofbZaCI\nxM8BsDch8CtcnSHi1GAz1pboHVMMwE71Ux7AhUJIpR+B1YTEhwS4yrCp3KJ7O02v\ngjYMGZuNSpGKqHH+jXpHRUIqx/gQIqGbzp4+jjwoHkFjRqeue0Ws60QtpNLJcFcR\n8yB5fOrS5jBRsi7vEuFt9tI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "germinal-trumail@project-id-4440103910321186206.iam.gserviceaccount.com",
+  "client_id": "114425843505477674230",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/germinal-trumail%40project-id-4440103910321186206.iam.gserviceaccount.com"
+}
