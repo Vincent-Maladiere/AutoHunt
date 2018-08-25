@@ -62,7 +62,7 @@ Apps_Script_Credentials = 'YOUR_CREDENTIAL_FILE.json'
 ### Running
 
 ```
-python3 AutoHunt.py
+python3 AutoHunt/AutoHunt.py
 ```
 
 ## Structure
