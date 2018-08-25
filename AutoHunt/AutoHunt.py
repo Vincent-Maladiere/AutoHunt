@@ -406,12 +406,3 @@ if __name__ == '__main__':
 
 
 
-# PAP : OK
-# Century21 : pas de photo_url (IDF à la place), pas d'arrondissement (IDF encore) et pas de surface (IDF de merde)
-#             description enlever les balises <br> etc
-#             surface à l'extremite droite wtfff
-# SeLoger : Crash
-
-# Multi-threading 3 coeurs
-
-# Flask ou Raspberry ?
