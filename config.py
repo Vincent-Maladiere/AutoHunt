@@ -262,4 +262,4 @@ Y_INDEX_KEYWORD_TOP = 0
 Y_INDEX_KEYWORD_BOTTOM = 3
 
 # Name of the Google Script API Credential file
-Apps_Script_Credentials = 'YOUR_CREDENTIAL_FILE.json'
+Apps_Script_Credentials = 'Your_Apps_Script_Execution.json'
