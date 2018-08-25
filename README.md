@@ -65,7 +65,15 @@ Apps_Script_Credentials = 'YOUR_CREDENTIAL_FILE.json'
 python3 AutoHunt.py
 ```
 
-## TODO NEXT
+## Structure
+
+```
+AutoHunt.py
+```
+Result class, Scraper class and main function
+
+
+## Todo Next
 
 Deploying the project on pythonanywhere or Django to ensure a steady run.
 
