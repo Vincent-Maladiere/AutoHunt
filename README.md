@@ -86,6 +86,7 @@ Fast uploading of scraping results on google spreadsheet.
 
 Deploying the project on pythonanywhere or Django to ensure a steady run.
 Multi-threading on 3 cores, one core for one website.
+Add tests.
 
 ## Authors
 
