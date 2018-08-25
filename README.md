@@ -19,11 +19,15 @@ Watch the results from supported website! (See config for full list of website)
 
 ### Prerequisites
 
-• Python version 3.3+ \n
-• gspread >=3.0.0 \n
-• pandas >=0.20.3 \n
-• selenium >=3.11.0 \n
-• oauth2client >=4.1.2 \n
+• Python version 3.3+
+
+• gspread >=3.0.0
+
+• pandas >=0.20.3
+
+• selenium >=3.11.0 
+
+• oauth2client >=4.1.2 
 
 ### Installing
 
@@ -63,7 +67,7 @@ python3 AutoHunt.py
 
 ## TODO NEXT
 
-Deploying the project on pythonanywhere or Django to ensure a steady run
+Deploying the project on pythonanywhere or Django to ensure a steady run.
 
 ## Authors
 
