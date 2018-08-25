@@ -11,7 +11,7 @@ You can use keyword on the right to boost, filter or delete results
 
 ### Results Sheet
 
-Watch the results from supported website! (See config for full list of website)
+Watch the results from supported websites! (See config for full list of them)
 
 ![alt text](https://raw.githubusercontent.com/Vincent-Maladiere/AutoHunt/master/results.png)
 
@@ -72,10 +72,20 @@ AutoHunt.py
 ```
 Result class, Scraper class and main function
 
+```
+spreadsheet.py
+```
+Shaping and downloading of data through gspread and pandas 
+
+```
+format.py
+```
+Fast uploading of scraping results on google spreadsheet
 
 ## Todo Next
 
 Deploying the project on pythonanywhere or Django to ensure a steady run.
+Multi-threading on 3 cores, one core for one website.
 
 ## Authors
 
