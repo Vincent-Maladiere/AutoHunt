@@ -71,7 +71,7 @@ Deploying the project on pythonanywhere or Django to ensure a steady run.
 
 ## Authors
 
-* **Vincent Maladiere** - *Initial work* - [Vincent-Maladiere](https://github.com/Vincent-Maladiere)
+* **Vincent Maladiere** - AutoHunt - [Vincent-Maladiere](https://github.com/Vincent-Maladiere)
 
 ## License
 
