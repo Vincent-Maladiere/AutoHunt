@@ -284,30 +284,26 @@ class Scraper(object):
 
 def main(driver):
 
-    logprint('\n\n_________________AutoHunt 1.0 (beta)_________________\n\n')
+    logprint('\n\n_________________AutoHunt 0.1.0 (alpha)_________________\n\n')
 
     tic = time.time()
 
     result_sheet, input_sheet = open_spreadsheet(GOOGLE_SPREADSHEET_NAME)
     result_sheet_values, input_sheet_values = result_sheet.get_all_values(), input_sheet.get_all_values()
-
+    
+    # Getting the dictionary of the search parameters
     search_keys = get_key(input_sheet_values)
-
-    #search_keys = {'Localisation': 'Neuilly', 'Budget min': '100000', 'Budget max': '500000', 'Surface min': '30',
-    #               'Surface max': '100', 'Nombre de pièces': 3}
 
     # Getting the list of all targets
     targets_list = get_target_list()
 
     result_list = []
 
-    #driver.get('https://www.pap.fr/annonce/vente-immobiliere-paris-5e-g37772-3-pieces-jusqu-a-1200000-euros-a-partir-de-20-m2')
-
-    #for target in targets_list:
-    target = targets.Century21
-    scraper = Scraper(name=target, driver=driver, search_keys=search_keys)
-    scraper.parameters_setter()
-    scraper.item_scraper()
+    for target in targets_list:
+        target = targets.Century21
+        scraper = Scraper(name=target, driver=driver, search_keys=search_keys)
+        scraper.parameters_setter()
+        scraper.item_scraper()
 
     # scraper.result_list is a mutable class attribute, thus all Scraper objects share it
     result_list = scraper.result_list
@@ -316,80 +312,6 @@ def main(driver):
 
     toc = time.time()
     print('Durée: {} sec'.format(toc-tic))
-
-class Test(object):
-
-    def __init__(self, driver, search_keys, name):
-        self.driver = driver
-        self.wait = WebDriverWait(self.driver, EC_MAX_TO_WAIT)
-        self.name = name
-        self.search_keys = search_keys
-        self.search_fields = SEARCH_FIELDS[name]
-
-    def _safe_action(func):
-        @wraps(func)
-        def decorator(self, *args, **kwargs):
-            try:
-                func(self, *args, **kwargs)
-                print('GOOD')
-            except NoSuchElementException as e:
-                self._display_warning(e)
-                return NOT_FOUND_ITEM
-
-        return decorator
-
-    def parameters_setter(self):
-        # Set parameters of the search according to self.key_search
-
-        self.driver.get(SEARCH_LINKS[self.name])
-        self.wait.until(
-            EC.visibility_of_element_located(
-                (By.CSS_SELECTOR, self.search_fields[fields.location]['path']))) # item 'location' is arbitrary chosen, we just need to wait for some element
-
-        for field, action in list(self.search_fields.items()):
-            if field in list(self.search_keys.keys()):
-                self.bar(action)  # , method=action['method'], field=field)
-            if field in FIELD_WHITELIST:
-                self.bar(action)  # , method=action['method'])
-
-    def _display_warning(self, msg):
-        print('WARNING {}'.format(msg))
-
-    @_safe_action
-    def bar(self, action):
-        print("normal call")
-        print('action {}'.format(action))
-        self.driver.find_element_by_css_selector(action['path'])
-        if isinstance(action['method'], tuple):
-            print(repr(action['method'])[1])
-        else:
-            print(repr(action['method']))
-        print(type(action['method']))
-
-def test1():
-    driver = webdriver.Chrome('chromedriver')
-    search_keys = {'Localisation': 'Neuilly', 'Nombre de pieces': 3, 'Budget min': 300000, 'Budget max': 1200000,
-                   'Surface min': 20, 'Surface max': 100}
-    driver.get('https://www.pap.fr/annonces/appartement-paris-5e-r422401573')
-    wait = WebDriverWait(driver, 10)
-    wait.until(
-        EC.visibility_of_element_located((By.CSS_SELECTOR, 'body > div.right-sidebar-layout.bg-grey-1.details-annonce-container > div > div.main-content > div.details-item > div > div > h1 > span.h1'))
-    )
-
-    #res = ['https://www.pap.fr/' + elem.split('href=')[1].split('"')[0] for elem in
-    #           driver.find_element_by_xpath('/html/body/div[2]/div/div[1]/div[2]/div[1]').get_attribute('outerHTML').split(
-    #               'item-title')[1:]]
-    #res = [elem.find_element_by_css_selector('a').get_attribute('href') for elem in driver.find_elements_by_class_name("search-list-item")]
-    print(SCRAPE_FIELDS[targets.PAP][results.title](driver))
-    print(SCRAPE_FIELDS[targets.PAP][results.price](driver))
-    print(SCRAPE_FIELDS[targets.PAP][results.date_creation](driver))
-    print(SCRAPE_FIELDS[targets.PAP][results.surface](driver))
-    print(SCRAPE_FIELDS[targets.PAP][results.photo_url](driver))
-
-def test2():
-    result_sheet, _, = open_spreadsheet(GOOGLE_SPREADSHEET_NAME)
-
-
 
 
 
@@ -401,8 +323,9 @@ if __name__ == '__main__':
     #prefs.add_argument(
     #    "user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36")
     driver = webdriver.Chrome(chrome_options=chromeOptions)
-
-    main(driver=driver) #TODO close
-
+    try:
+        main(driver=driver) 
+    finally:
+        driver.close()
 
 
